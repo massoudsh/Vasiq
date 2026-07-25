@@ -1,0 +1,17 @@
+{
+  "service_type": "field_force_installer",
+  "policy_version": "2026-07-01",
+  "required_credentials": [
+    { "type": "technical_certificate", "min_days_valid": 60 },
+    { "type": "safety_training_certificate", "min_days_valid": 120, "grace_days": 10 }
+  ],
+  "required_equipment": [
+    { "type": "safety_gear", "min_confidence": 0.75 },
+    { "type": "toolkit", "min_confidence": 0.7 }
+  ],
+  "risk": {
+    "max_score": 50,
+    "conditional_band": [35, 50]
+  },
+  "duplicate_photo_policy": "reject"
+}

@@ -1,0 +1,17 @@
+{
+  "service_type": "food_delivery_bike",
+  "policy_version": "2026-07-01",
+  "required_credentials": [
+    { "type": "motorcycle_license", "min_days_valid": 30 },
+    { "type": "vehicle_insurance", "min_days_valid": 15, "grace_days": 3 }
+  ],
+  "required_equipment": [
+    { "type": "delivery_box", "min_confidence": 0.75 },
+    { "type": "helmet", "min_confidence": 0.8 }
+  ],
+  "risk": {
+    "max_score": 65,
+    "conditional_band": [50, 65]
+  },
+  "duplicate_photo_policy": "reject"
+}

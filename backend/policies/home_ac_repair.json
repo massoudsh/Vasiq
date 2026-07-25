@@ -1,0 +1,16 @@
+{
+  "service_type": "home_ac_repair",
+  "policy_version": "2026-07-01",
+  "required_credentials": [
+    { "type": "technical_certificate", "min_days_valid": 90 },
+    { "type": "background_check", "min_days_valid": 180, "grace_days": 14 }
+  ],
+  "required_equipment": [
+    { "type": "toolkit", "min_confidence": 0.7 }
+  ],
+  "risk": {
+    "max_score": 45,
+    "conditional_band": [30, 45]
+  },
+  "duplicate_photo_policy": "reject"
+}

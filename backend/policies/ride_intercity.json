@@ -1,0 +1,15 @@
+{
+  "service_type": "ride_intercity",
+  "policy_version": "2026-07-01",
+  "required_credentials": [
+    { "type": "driving_license", "min_days_valid": 60 },
+    { "type": "vehicle_insurance", "min_days_valid": 30, "grace_days": 5 },
+    { "type": "technical_inspection", "min_days_valid": 15, "grace_days": 3 }
+  ],
+  "required_equipment": [],
+  "risk": {
+    "max_score": 55,
+    "conditional_band": [40, 55]
+  },
+  "duplicate_photo_policy": "reject"
+}

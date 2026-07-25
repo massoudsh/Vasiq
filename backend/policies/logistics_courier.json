@@ -1,0 +1,17 @@
+{
+  "service_type": "logistics_courier",
+  "policy_version": "2026-07-01",
+  "required_credentials": [
+    { "type": "driving_license", "min_days_valid": 30 },
+    { "type": "vehicle_insurance", "min_days_valid": 15, "grace_days": 3 },
+    { "type": "cargo_handling_certificate", "min_days_valid": 60 }
+  ],
+  "required_equipment": [
+    { "type": "cargo_seal_kit", "min_confidence": 0.75 }
+  ],
+  "risk": {
+    "max_score": 50,
+    "conditional_band": [35, 50]
+  },
+  "duplicate_photo_policy": "reject"
+}
